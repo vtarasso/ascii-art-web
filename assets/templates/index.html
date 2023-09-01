@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage | ASCII ART WEB</title>
+    <link rel="stylesheet" href="/assets/style/style.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/imgs/favicon.png">
+  </head>
+  <body>
+    <div class="bg">
+      <marquee behavior="scroll" direction="left">
+        <pre>{{.OutputWord}}</pre>
+      </marquee>
+    </div>
+    <div class="container">
+      <h1 class="name animation">ASCII-ART-WEB</h1>
+      <form method="POST" class="input-box" action="/ascii-art">
+        <textarea name="text" id="" placeholder="Write anything!" required>{{.InputWord}}</textarea>
+        <div class="command-box">
+          <div class="radios">
+            <span><input type="radio" id="standard" name="banner" value="standard" checked/>
+            <label for = "standard">standard</label></span>
+            <span>
+              <input type="radio" id="shadow" name="banner" value="shadow"/>
+            <label for = "shadow">shadow</label>
+            </span>
+            <span>
+              <input
+              type="radio" id= "thinkertoy" name="banner" value="thinkertoy"
+            />
+            <label for = "thinkertoy">thinkertoy</label>
+            </span>
+          </div>
+        </div>
+        <div class="btn-liquid">
+          <input class="inner" type="submit" />
+        </div>
+      </form>
+      <div class="res-board">
+        <div class ="authors animation">By vtarasso, smustafi</div>
+        <pre>{{.OutputWord}}</pre>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/assets/script/script.js"></script>
+  </body>
+</html>
